@@ -1,28 +1,19 @@
 {
-  "name": "simple-react-component-generator",
+  "name": "generate-react-component",
   "displayName": "Simple React Component Generator",
   "description": "Generates files for new React components",
   "author": {
-    "name": "18reg"
+    "name": "reliutg"
   },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.71.0"
   },
-  "categories": [
-    "Other"
-  ],
-  "keywords": [
-    "react",
-    "component",
-    "generator",
-    "typescript"
-  ],
+  "categories": ["Other"],
+  "keywords": ["react", "component", "generator", "typescript"],
   "publisher": "reliutg",
-  "bugs:url": "https://github.com/18reg/simple-react-component-generator/issues",
-  "activationEvents": [
-    "onCommand:extension.generateComponent"
-  ],
+  "bugs:url": "https://github.com/roberth-gonzalez/generate-react-component/issues",
+  "activationEvents": ["onCommand:extension.generateComponent"],
   "main": "./out/extension.js",
   "browser": "./out/extension.js",
   "icon": "icon.png",
@@ -53,21 +44,13 @@
         "reactComponentGenerator.language": {
           "type": "string",
           "default": "ts",
-          "enum": [
-            "ts",
-            "js"
-          ],
+          "enum": ["ts", "js"],
           "description": "Specifies if components should be generated in TypeScript or JavaScript."
         },
         "reactComponentGenerator.stylesLanguage": {
           "type": "string",
           "default": "scss",
-          "enum": [
-            "scss",
-            "css",
-            "module.scss",
-            "module.css"
-          ],
+          "enum": ["scss", "css", "module.scss", "module.css"],
           "description": "Specifies what language will be used for styles."
         },
         "reactComponentGenerator.useIndexFile": {
@@ -85,9 +68,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/18reg/simple-react-component-generator"
+    "url": "https://github.com/roberth-gonzalez/generate-react-component"
   },
-  "homepage": "https://github.com/18reg/simple-react-component-generator/blob/main/README.md",
+  "homepage": "https://github.com/roberth-gonzalez/generate-react-component/blob/main/README.md",
   "license": "MIT",
   "scripts": {
     "vscode:prepublish": "npm run compile -- --minify",
