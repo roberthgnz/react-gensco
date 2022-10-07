@@ -1,5 +1,5 @@
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/i/reliutg.generate-react-component)](https://marketplace.visualstudio.com/items?itemName=reliutg.generate-react-component)
-[![Github](https://img.shields.io/github/stars/roberth-gonzalez/generate-react-component?style=social)](https://github.com/roberth-gonzalez/generate-react-component)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/i/reliutg.react-gensco)](https://marketplace.visualstudio.com/items?itemName=reliutg.react-gensco)
+[![Github](https://img.shields.io/github/stars/roberth-gonzalez/react-gensco?style=social)](https://github.com/roberth-gonzalez/react-gensco)
 [![Twitter](https://img.shields.io/twitter/follow/roberth_gon?style=social)](https://twitter.com/roberth_gon)
 [![buymeacoffee](https://img.shields.io/badge/buymeacoffee-%24-yellow)](https://www.buymeacoffee.com/roberth.gonz)
 
