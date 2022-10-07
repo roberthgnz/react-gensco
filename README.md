@@ -1,15 +1,20 @@
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/i/reliutg.generate-react-component)](https://marketplace.visualstudio.com/items?itemName=reliutg.generate-react-component)
+[![Github](https://img.shields.io/github/stars/roberth-gonzalez/generate-react-component?style=social)](https://github.com/roberth-gonzalez/generate-react-component)
+[![Twitter](https://img.shields.io/twitter/follow/roberth_gon?style=social)](https://twitter.com/roberth_gon)
+[![buymeacoffee](https://img.shields.io/badge/buymeacoffee-%24-yellow)](https://www.buymeacoffee.com/roberth.gonz)
+
 # React Component Generator
 
-A VS Code extension for generating new React component files with the following structure:
+Generate React components:
 
-- `StartingComponent`
+- `src`
   - `/components`
-    - `index.ts`
     - `/NewComponent`
-      - `index.ts`
-      - `NewComponent.tsx`
+      - `index.ts|.js`
+      - `NewComponent.css|.scss|.module.css|.module.scss`
+      - `NewComponent.ts|.js`
       - `/tests`
-        - `NewComponent.test.tsx`
+        - `NewComponent.test.ts|.js`
 
 ## Features
 
