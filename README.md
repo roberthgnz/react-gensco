@@ -1,4 +1,4 @@
-# Simple Simple React Component Generator
+# React Component Generator
 
 A VS Code extension for generating new React component files with the following structure:
 
