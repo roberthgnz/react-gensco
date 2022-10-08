@@ -1,6 +1,6 @@
 {
   "name": "react-gensco",
-  "displayName": "Simple React Component Generator",
+  "displayName": "React Component Generator",
   "description": "Generates files for new React components",
   "author": {
     "name": "roberth"
