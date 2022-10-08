@@ -1,6 +1,6 @@
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/i/roberth.react-gensco)](https://marketplace.visualstudio.com/items?itemName=roberth.react-gensco)
 [![Github](https://img.shields.io/github/stars/rxb3rth/react-gensco?style=social)](https://github.com/rxb3rth/react-gensco)
-[![Twitter](https://img.shields.io/twitter/follow/roberth_gon?style=social)](https://twitter.com/roberth_gon)
+[![Twitter](https://img.shields.io/twitter/follow/rxb3rth?style=social)](https://twitter.com/rxb3rth)
 [![buymeacoffee](https://img.shields.io/badge/buymeacoffee-%24-yellow)](https://www.buymeacoffee.com/roberth.gonz)
 
 # React Component Generator
