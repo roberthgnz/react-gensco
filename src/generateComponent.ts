@@ -15,27 +15,8 @@ import {
 } from "./templates";
 import { Language, StyleLanguage } from "./types";
 
-async function directoryToAddComponent(uri: Uri) {
-  const { path } = uri;
-
-  // If user clicked on a components folder, we want to add our new component there
-  if (path.endsWith("components")) {
-    return path;
-    // If user clicks on a parent folder, we want to add our component to ParentFolder/components
-  } else if (await readDirectory(path)) {
-    return path.concat("/components");
-  }
-
-  // Otherwise, we want to work in the ./components folder
-  const pathArray = path.split("/");
-  pathArray.pop();
-  const newPath = pathArray.join("/");
-
-  if (newPath.endsWith("components")) {
-    return newPath;
-  }
-
-  return newPath.concat("/components");
+function directoryToAddComponent(uri: Uri) {
+  return uri.path;
 }
 
 async function writeComponentsFolderIndexFile(
@@ -122,7 +103,7 @@ export async function generateComponent(uri?: Uri) {
     return window.showErrorMessage("No component name passed");
   }
 
-  const directory = await directoryToAddComponent(uri);
+  const directory = directoryToAddComponent(uri);
 
   writeComponentFiles(directory, componentName);
 }
