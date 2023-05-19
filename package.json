@@ -12,7 +12,7 @@
   "categories": ["Other"],
   "keywords": ["react", "component", "generator", "typescript"],
   "publisher": "roberth",
-  "bugs:url": "https://github.com/rxb3rth/react-gensco/issues",
+  "bugs:url": "https://github.com/roberthgnz/react-gensco/issues",
   "activationEvents": ["onCommand:extension.generateComponent"],
   "main": "./out/extension.js",
   "browser": "./out/extension.js",
@@ -68,9 +68,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rxb3rth/react-gensco"
+    "url": "https://github.com/roberthgnz/react-gensco"
   },
-  "homepage": "https://github.com/rxb3rth/react-gensco/blob/main/README.md",
+  "homepage": "https://github.com/roberthgnz/react-gensco/blob/main/README.md",
   "license": "MIT",
   "scripts": {
     "vscode:prepublish": "npm run compile -- --minify",
