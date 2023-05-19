@@ -21,8 +21,8 @@ import { Language, StyleLanguage } from "./types";
  * folder needs to be extracted from the document's file-path
  */
 function directoryToAddComponent(
-  uriFromExplorer: Uri,
-  uriFromActiveEditor: Uri
+  uriFromExplorer: Uri | undefined,
+  uriFromActiveEditor: Uri | undefined
 ) {
   return uriFromExplorer
     ? uriFromExplorer.path
@@ -115,7 +115,7 @@ export async function generateComponent(uri?: Uri) {
 
   const directory = directoryToAddComponent(
     uri,
-    window.activeTextEditor.document.uri
+    window.activeTextEditor?.document.uri
   );
 
   writeComponentFiles(directory, componentName);
