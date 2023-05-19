@@ -1,4 +1,5 @@
 import { window, Uri } from "vscode";
+const path = require("path");
 
 import {
   writeFile,
@@ -15,8 +16,17 @@ import {
 } from "./templates";
 import { Language, StyleLanguage } from "./types";
 
-function directoryToAddComponent(uri: Uri) {
-  return uri.path;
+/**
+ * If extension invokation happens with focus on editor,
+ * folder needs to be extracted from the document's file-path
+ */
+function directoryToAddComponent(
+  uriFromExplorer: Uri,
+  uriFromActiveEditor: Uri
+) {
+  return uriFromExplorer
+    ? uriFromExplorer.path
+    : uriFromActiveEditor.path.split(path.sep).slice(0, -1).join(path.sep);
 }
 
 async function writeComponentsFolderIndexFile(
@@ -91,7 +101,7 @@ async function writeComponentFiles(directory: string, componentName: string) {
 
 // This is the function that gets registered to our command
 export async function generateComponent(uri?: Uri) {
-  if (!uri) {
+  if (!uri && !window.activeTextEditor) {
     return window.showErrorMessage("No file path found.");
   }
 
@@ -103,7 +113,10 @@ export async function generateComponent(uri?: Uri) {
     return window.showErrorMessage("No component name passed");
   }
 
-  const directory = directoryToAddComponent(uri);
+  const directory = directoryToAddComponent(
+    uri,
+    window.activeTextEditor.document.uri
+  );
 
   writeComponentFiles(directory, componentName);
 }
