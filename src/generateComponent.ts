@@ -1,12 +1,7 @@
 import { window, Uri } from "vscode";
 const path = require("path");
 
-import {
-  writeFile,
-  getSetting,
-  readFile,
-  openFile,
-} from "./utilities";
+import { writeFile, getSetting, readFile, openFile } from "./utilities";
 import {
   exportLineTemplate,
   reactFunctionComponentTemplate,

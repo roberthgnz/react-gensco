@@ -5,15 +5,24 @@
   "author": {
     "name": "roberth"
   },
-  "version": "0.0.3",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.71.0"
   },
-  "categories": ["Other"],
-  "keywords": ["react", "component", "generator", "typescript"],
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "react",
+    "component",
+    "generator",
+    "typescript"
+  ],
   "publisher": "roberth",
   "bugs:url": "https://github.com/roberthgnz/react-gensco/issues",
-  "activationEvents": ["onCommand:extension.generateComponent"],
+  "activationEvents": [
+    "onCommand:extension.generateComponent"
+  ],
   "main": "./out/extension.js",
   "browser": "./out/extension.js",
   "icon": "icon.png",
@@ -44,13 +53,21 @@
         "reactComponentGenerator.language": {
           "type": "string",
           "default": "ts",
-          "enum": ["ts", "js"],
+          "enum": [
+            "ts",
+            "js"
+          ],
           "description": "Specifies if components should be generated in TypeScript or JavaScript."
         },
         "reactComponentGenerator.stylesLanguage": {
           "type": "string",
           "default": "scss",
-          "enum": ["scss", "css", "module.scss", "module.css"],
+          "enum": [
+            "scss",
+            "css",
+            "module.scss",
+            "module.css"
+          ],
           "description": "Specifies what language will be used for styles."
         },
         "reactComponentGenerator.useIndexFile": {

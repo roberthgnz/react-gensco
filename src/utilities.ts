@@ -1,4 +1,4 @@
-import {window, workspace, Uri} from 'vscode';
+import { window, workspace, Uri } from "vscode";
 
 export async function writeFile(path: string, content: string) {
   return workspace.fs.writeFile(
@@ -9,7 +9,7 @@ export async function writeFile(path: string, content: string) {
 
 export function getSetting<T>(key: string, defaultValue: T): T {
   const value: T | undefined = workspace
-    .getConfiguration('reactComponentGenerator')
+    .getConfiguration("reactComponentGenerator")
     .get(key);
 
   return value === undefined ? defaultValue : value;
