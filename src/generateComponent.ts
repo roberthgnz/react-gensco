@@ -5,7 +5,6 @@ import {
   writeFile,
   getSetting,
   readFile,
-  readDirectory,
   openFile,
 } from "./utilities";
 import {

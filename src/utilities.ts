@@ -24,15 +24,6 @@ export async function readFile(path: string) {
   }
 }
 
-export async function readDirectory(path: string) {
-  try {
-    const directory = await workspace.fs.readDirectory(Uri.file(path));
-    return directory;
-  } catch {
-    return null;
-  }
-}
-
 export function openFile(path: string) {
   workspace.openTextDocument(Uri.file(path)).then((doc) => {
     window.showTextDocument(doc);
