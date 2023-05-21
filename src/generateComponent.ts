@@ -1,7 +1,13 @@
 import { window, Uri } from "vscode";
 const path = require("path");
 
-import { writeFile, getSetting, readFile, openFile } from "./utilities";
+import {
+  writeFile,
+  getSetting,
+  readFile,
+  openFile,
+  startWithLower,
+} from "./utilities";
 import {
   exportLineTemplate,
   reactFunctionComponentTemplate,
@@ -56,6 +62,7 @@ async function writeComponentFiles(directory: string, componentName: string) {
   );
   const tests = getSetting<boolean>("createTestsFile", false);
   const useIndexFile = getSetting<boolean>("useIndexFile", true);
+  const lowerCaseStylesFile = getSetting<boolean>("lowerCaseStylesFile", false);
 
   // Write index file
   writeFile(
@@ -72,7 +79,9 @@ async function writeComponentFiles(directory: string, componentName: string) {
 
   // Write style file
   writeFile(
-    `${directory}/${componentName}/${componentName}.${stylesLanguage}`,
+    `${directory}/${componentName}/${
+      lowerCaseStylesFile ? startWithLower(componentName) : componentName
+    }.${stylesLanguage}`,
     stylesTemplate(componentName)
   );
 

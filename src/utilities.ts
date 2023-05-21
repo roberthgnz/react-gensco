@@ -29,3 +29,7 @@ export function openFile(path: string) {
     window.showTextDocument(doc);
   });
 }
+
+export function startWithLower(str: string) {
+  return str.charAt(0).toLowerCase() + str.slice(1);
+}
