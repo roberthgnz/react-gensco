@@ -91,8 +91,7 @@ async function writeComponentFiles(directory: string, componentName: string) {
 
   // Write style file
   writeFile(
-    `${directory}/${componentName}/${
-      lowerCaseStylesFile ? startWithLower(componentName) : componentName
+    `${directory}/${componentName}/${lowerCaseStylesFile ? startWithLower(componentName) : componentName
     }.${stylesLanguage}`,
     stylesTemplate(componentName)
   );
