@@ -1,4 +1,5 @@
 import { window, workspace, Uri } from "vscode";
+import * as path from "path";
 
 export async function writeFile(path: string, content: string) {
   return workspace.fs.writeFile(
@@ -32,4 +33,11 @@ export function openFile(path: string) {
 
 export function startWithLower(str: string) {
   return str.charAt(0).toLowerCase() + str.slice(1);
+
+export function pathWithFile(pathStr: string) {
+  return pathStr.split(path.sep).slice(-1)[0].includes(".");
+}
+
+export function extractFolder(pathStr: string) {
+  return pathStr.split(path.sep).slice(0, -1).join(path.sep);
 }

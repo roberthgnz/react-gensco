@@ -1,5 +1,5 @@
 import { window, Uri } from "vscode";
-const path = require("path");
+import * as path from "path";
 
 import {
   writeFile,
@@ -7,6 +7,8 @@ import {
   readFile,
   openFile,
   startWithLower,
+  extractFolder,
+  pathWithFile,
 } from "./utilities";
 import {
   exportLineTemplate,
@@ -24,9 +26,13 @@ function directoryToAddComponent(
   uriFromExplorer: Uri | undefined,
   uriFromActiveEditor: Uri | undefined
 ) {
-  return uriFromExplorer
-    ? uriFromExplorer.path
-    : uriFromActiveEditor.path.split(path.sep).slice(0, -1).join(path.sep);
+  if (!uriFromExplorer) {
+    return extractFolder(uriFromActiveEditor.path);
+  }
+  if (pathWithFile(uriFromExplorer.path)) {
+    return extractFolder(uriFromExplorer.path);
+  }
+  return uriFromExplorer.path;
 }
 
 async function writeComponentsFolderIndexFile(
@@ -72,9 +78,15 @@ async function writeComponentFiles(directory: string, componentName: string) {
 
   // Write component file
   const componentPath = `${directory}/${componentName}/${componentName}.${language}x`;
+  const templateFromConfig = getSetting<string[]>("componentTemplate", []);
   const componentPromise = writeFile(
     componentPath,
-    reactFunctionComponentTemplate(componentName, language, stylesLanguage)
+    reactFunctionComponentTemplate(
+      componentName,
+      language,
+      stylesLanguage,
+      templateFromConfig
+    )
   );
 
   // Write style file
