@@ -1,7 +1,14 @@
 import { window, Uri } from "vscode";
-const path = require("path");
+import * as path from "path";
 
-import { writeFile, getSetting, readFile, openFile } from "./utilities";
+import {
+  writeFile,
+  getSetting,
+  readFile,
+  openFile,
+  extractFolder,
+  pathWithFile,
+} from "./utilities";
 import {
   exportLineTemplate,
   reactFunctionComponentTemplate,
@@ -18,9 +25,13 @@ function directoryToAddComponent(
   uriFromExplorer: Uri | undefined,
   uriFromActiveEditor: Uri | undefined
 ) {
-  return uriFromExplorer
-    ? uriFromExplorer.path
-    : uriFromActiveEditor.path.split(path.sep).slice(0, -1).join(path.sep);
+  if (!uriFromExplorer) {
+    return extractFolder(uriFromActiveEditor.path);
+  }
+  if (pathWithFile(uriFromExplorer.path)) {
+    return extractFolder(uriFromExplorer.path);
+  }
+  return uriFromExplorer.path;
 }
 
 async function writeComponentsFolderIndexFile(

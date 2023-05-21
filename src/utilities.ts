@@ -1,4 +1,5 @@
 import { window, workspace, Uri } from "vscode";
+import * as path from "path";
 
 export async function writeFile(path: string, content: string) {
   return workspace.fs.writeFile(
@@ -28,4 +29,12 @@ export function openFile(path: string) {
   workspace.openTextDocument(Uri.file(path)).then((doc) => {
     window.showTextDocument(doc);
   });
+}
+
+export function pathWithFile(pathStr: string) {
+  return pathStr.split(path.sep).slice(-1)[0].includes(".");
+}
+
+export function extractFolder(pathStr: string) {
+  return pathStr.split(path.sep).slice(0, -1).join(path.sep);
 }
