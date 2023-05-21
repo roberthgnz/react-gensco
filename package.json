@@ -79,6 +79,11 @@
           "type": "boolean",
           "default": "false",
           "description": "Specifies if the components should have test files."
+        },
+        "reactComponentGenerator.componentTemplate": {
+          "type": "string[]",
+          "default": "",
+          "description": "Specifies a temlate for components."
         }
       }
     }
