@@ -70,6 +70,11 @@
           ],
           "description": "Specifies what language will be used for styles."
         },
+        "reactComponentGenerator.lowerCaseStylesFile": {
+          "type": "boolean",
+          "default": "false",
+          "description": "Specifies if the styles file should start with lower case."
+        },
         "reactComponentGenerator.useIndexFile": {
           "type": "boolean",
           "default": "true",

@@ -6,6 +6,7 @@ import {
   getSetting,
   readFile,
   openFile,
+  startWithLower,
   extractFolder,
   pathWithFile,
 } from "./utilities";
@@ -67,6 +68,7 @@ async function writeComponentFiles(directory: string, componentName: string) {
   );
   const tests = getSetting<boolean>("createTestsFile", false);
   const useIndexFile = getSetting<boolean>("useIndexFile", true);
+  const lowerCaseStylesFile = getSetting<boolean>("lowerCaseStylesFile", false);
 
   // Write index file
   writeFile(
@@ -89,7 +91,9 @@ async function writeComponentFiles(directory: string, componentName: string) {
 
   // Write style file
   writeFile(
-    `${directory}/${componentName}/${componentName}.${stylesLanguage}`,
+    `${directory}/${componentName}/${
+      lowerCaseStylesFile ? startWithLower(componentName) : componentName
+    }.${stylesLanguage}`,
     stylesTemplate(componentName)
   );
 
