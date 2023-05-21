@@ -1,4 +1,7 @@
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/i/roberth.react-gensco)](https://marketplace.visualstudio.com/items?itemName=roberth.react-gensco)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Github](https://img.shields.io/github/stars/roberthgnz/react-gensco?style=social)](https://github.com/roberthgnz/react-gensco)
 [![Twitter](https://img.shields.io/twitter/follow/roberthgnz?style=social)](https://twitter.com/roberthgnz)
 [![buymeacoffee](https://img.shields.io/badge/buymeacoffee-%24-yellow)](https://www.buymeacoffee.com/roberth.gonz)
@@ -67,3 +70,24 @@ export function SuperCoolComponent(props: Props) {
 | reactComponentGenerator.useIndexFile      | Specifies if the components folder should have an index file to export all of its components. | true    |
 | reactComponentGenerator.createTestsFile   | Specifies if the components should have test files.                                           | false   |
 | reactComponentGenerator.componentTemplate | Specifies a temlate for components using a string-array.                                      | none    |
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.hanskrebs.me/"><img src="https://avatars.githubusercontent.com/u/7346919?v=4?s=100" width="100px;" alt="Hans"/><br /><sub><b>Hans</b></sub></a><br /><a href="https://github.com/roberthgnz/react-gensco/commits?author=HansKre" title="Code">💻</a> <a href="https://github.com/roberthgnz/react-gensco/commits?author=HansKre" title="Documentation">📖</a> <a href="https://github.com/roberthgnz/react-gensco/issues?q=author%3AHansKre" title="Bug reports">🐛</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
