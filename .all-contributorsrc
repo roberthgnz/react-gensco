@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "HansKre",
+      "name": "Hans",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7346919?v=4",
+      "profile": "https://www.hanskrebs.me/",
+      "contributions": [
+        "code",
+        "doc",
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "react-gensco",
+  "projectOwner": "roberthgnz"
+}
